@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="X.CSS">
+    <style>
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-part" id="part1">See other</div>
+        <div class="taskbar" id="taskbar" style="display: none;">
+            <a href="https://example.com/link1">Link 1</a>
+            <a href="https://example.com/link2">Link 2</a>
+            <a href="https://example.com/link3">Link 3</a>
+            <!-- Tambahkan lebih banyak link sesuai kebutuhan -->
+        </div>
+        <div class="header-part" id="part2">About Me</div>
+        <div class="header-part" id="part3">My Project</div>
+        <div class="header-part" id="part4">Other</div>
+    </header>
+    <main>
+        <section id="about-me">
+            <!-- Konten About Me Anda -->
+        </section>
+        <section id="my-projects">
+            <!-- Konten My Project Anda -->
+        </section>
+        <section id="x">
+            <!-- Konten X Anda -->
+        </section>
+        <div class="content">
+            <div class="section" id="about-me">
+                <div>
+                    <h1>About Me!</h1>
+                    <div>
+                        <p>Perkenalkan Saya Mohamad Afif Arsalan</p>
+                    </div>
+                    <div>
+                        <p>Saya sering dipanggil Afif dan berasal dari kota Jember, Jawa Timur, Indonesia.</p>
+                    </div>
+                    <div>
+                        <p>Saya sedang menempuh Pendidikan Mekatronika di SMK Negeri 02 Jember dan aktif berorganisasi dan berkompetisi disana.</p>
+                    </div>
+                    <div>
+                        <p>Saya harap kita dapat menjalin hubungan yang baik dan dapat bekerja sama dengan lancar <span class="smile">😊</span></p>
+                    </div>
+                    <div>
+                        <p>
+                            Halo loha
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="my-projects">
+                <p>My Projects section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="section" id="other">
+                <p>Other section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="C:\Users\user\Pictures\contoh dropsiper yang baik.PNG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="C:\Users\user\Pictures\ig1.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="C:\Users\user\Documents\IMG-20240216-WA0013.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="C:\Users\user\Documents\IMG-20240216-WA0008.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="C:\Users\user\Documents\IMG-20240216-WA0010.jpg" style="width:100%">
+            </div>
+        </div>
+        
+    <!-- Menghubungkan file JavaScript -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 4000); // Ubah gambaar setiap 4 detik
+        }
+    
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const offset = header.offsetHeight;
+            const scrollTop = window.pageYOffset;
+            if (scrollTop > offset) {
+                document.body.classList.add('blurred');
+            } else {
+                document.body.classList.remove('blurred');
+            }
+        });
+        </script>
+        <script src="D:\Afif\Projeck\Pembelajaran pemula\x\x.js"></script>
+</body>
+</html>
+
